@@ -24,7 +24,6 @@ export const Autentication = () => {
       }
     } catch (err) {
       if (err.response) {
-        // El servidor respondió con un código de estado fuera del rango 2xx
         switch (err.response.status) {
           case 400:
             Swal.fire({
@@ -55,14 +54,14 @@ export const Autentication = () => {
             });
         }
       } else if (err.request) {
-        // La solicitud fue hecha pero no se recibió respuesta
+
         Swal.fire({
           icon: 'error',
           title: 'Sin respuesta',
           text: 'No se recibió respuesta del servidor. Por favor, verifica tu conexión a internet.',
         });
       } else {
-        // Algo pasó al configurar la solicitud
+
         Swal.fire({
           icon: 'error',
           title: 'Error',

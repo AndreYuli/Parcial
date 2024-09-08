@@ -1,13 +1,20 @@
-import React from 'react'
-import '../styles/Login.css'
-import { ButtonsLogin } from '../components/ButtonsLogin'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../styles/Login.css';
+import { ButtonsLogin } from '../components/ButtonsLogin';
 
 export const Login = () => {
-    return (
-        <div className="container_principal">
-            <ButtonsLogin />
-        </div>
-    )
-}
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate('/dashboard');
+  };
+
+  return (
+    <div className="container_principal">
+      <ButtonsLogin onClick={handleLogin} />
+    </div>
+  );
+};
 
 export default Login;
