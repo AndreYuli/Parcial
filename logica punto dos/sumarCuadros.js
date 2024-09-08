@@ -13,6 +13,5 @@ function sumarCuadros(arrayNumeros) {
     console.log(`|${sumaTotalStr}|`);
 }
 
-// Ejemplo de uso
 const arrayNumeros = [1, 23, 453, 3267, 12354, 123456];
 sumarCuadros(arrayNumeros);
